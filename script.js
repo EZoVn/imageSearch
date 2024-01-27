@@ -5,17 +5,20 @@ const searchForm = document.getElementById('search-form');
 const searchBox = document.getElementById('search-box');
 const resultBtn = document.getElementById('search-result');
 const showMoreBtn = document.getElementById('show-more');
+const orientationSelect = document.getElementById('orientation');
 
 let keyword = 'birds';
 let page = 1;
 
 async function searchImages() {
   keyword = searchBox.value;
-  const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`;
+  const orientation = orientationSelect.value;
+  const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12&order_by=latest&orientation=${orientation}`;
 
   const response = await fetch(url);
   const data = await response.json();
   const results = data.results;
+  console.log(results);
   if (page === 1) {
     resultBtn.innerHTML = '';
   }
@@ -39,6 +42,7 @@ async function searchImages() {
 
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
+
   page = 1;
   searchImages();
 });
@@ -47,3 +51,4 @@ showMoreBtn.addEventListener('click', () => {
   page++;
   searchImages();
 });
+

@@ -544,10 +544,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .m-auto {
   margin: auto;
 }
@@ -557,41 +553,20 @@ video {
   margin-right: auto;
 }
 
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.mt-48 {
-  margin-top: 12rem;
-}
-
-.mt-44 {
-  margin-top: 11rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .mb-14 {
   margin-bottom: 3.5rem;
 }
 
-.mt-28 {
-  margin-top: 7rem;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .mt-24 {
   margin-top: 6rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
+.mt-28 {
+  margin-top: 7rem;
 }
 
 .flex {
@@ -636,10 +611,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.gap-10 {
-  gap: 2.5rem;
 }
 
 .gap-5 {
@@ -732,4 +703,37 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(13 27 42 / var(--tw-text-opacity));
+}
+
+.focus\:rounded-lg:focus {
+  border-radius: 0.5rem;
+}
+
+.focus\:text-primary:focus {
+  --tw-text-opacity: 1;
+  color: rgb(13 27 42 / var(--tw-text-opacity));
+}
+
+.focus\:text-secondary:focus {
+  --tw-text-opacity: 1;
+  color: rgb(27 38 59 / var(--tw-text-opacity));
+}
+
+.focus\:text-white:focus {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.active\:text-primary:active {
+  --tw-text-opacity: 1;
+  color: rgb(13 27 42 / var(--tw-text-opacity));
 }
