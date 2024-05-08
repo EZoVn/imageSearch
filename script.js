@@ -1,4 +1,4 @@
-const accessKey = '';
+const accessKey = process.env.ACCESS_KEY;
 
 
 const searchForm = document.getElementById('search-form');
